@@ -1,0 +1,20 @@
+{
+  "name": "MoveOn | Your Fitness Journey Starts Here",
+  "short_name": "MoveOn",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/assets/img/phone_icon_1.svg",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/phone_icon_2.svg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

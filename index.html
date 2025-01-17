@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Join MoveOn to track your fitness journey, monitor your progress, and achieve your health goals. Real-time activity tracking, comprehensive analytics, and personalized insights."
+    />
+    <meta
+      name="keywords"
+      content="fitness tracking, activity monitor, GPS tracking, fitness journey, workout analytics"
+    />
+    <meta name="author" content="Ahmed Omran" />
+
+    <!-- social card -->
+    <meta
+      property="og:title"
+      content="MoveOn | Your Fitness Journey Starts Here"
+    />
+    <meta
+      property="og:description"
+      content="Join MoveOn to track your fitness journey, monitor your progress, and achieve your health goals."
+    />
+    <meta property="og:image" content="assets/img/logo.svg" />
+    <meta property="og:url" content="https://example.com/" />
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="MoveOn | Your Fitness Journey Starts Here"
+    />
+    <meta
+      name="twitter:description"
+      content="Join MoveOn to track your fitness journey."
+    />
+    <meta name="twitter:image" content="assets/img/logo.svg" />
+
+    <title>MoveOn | Your Fitness Journey Starts Here</title>
+
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.svg"
+      type="image/x-icon"
+    />
+    <link rel="manifest" href="/manifest.json" />
+
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/output.css" />
+
+    <script src="./src/js/script.js" type="module"></script>
+  </head>
+  <body class="h-screen">
+    <header class="absolute w-full bg-transparent p-4 z-10">
+      <div
+        class="relative rounded-full bg-white container mx-auto flex justify-between items-center py-4 px-8"
+      >
+        <div class="logo">
+          <img
+            src="assets/img/logo.svg"
+            alt="MoveOn logo"
+            class="w-20 md:w-28"
+          />
+        </div>
+        <button id="menu-btn" class="menu-btn flex flex-col gap-1 w-4">
+          <div class="border border-main w-4"></div>
+          <div class="border border-main w-4"></div>
+          <div class="border border-main w-4"></div>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div
+      id="overlay-menu"
+      class="fixed right-0 z-10 inset-0 bg-black bg-opacity-50 hidden"
+    >
+      <div class="bg-white w-full h-full md:w-1/4">
+        <button id="close-menu" class="relative top-4 left-4 text-main">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+        <nav class="p-4 text-center">
+          <ul class="space-y-4 text-center">
+            <li>
+              <a
+                href="#features"
+                class="block py-2 hover:text-main transition-colors"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a
+                href="#howto"
+                class="block py-2 hover:text-main transition-colors"
+                >How to use?</a
+              >
+            </li>
+            <li>
+              <a
+                href="#testimonials"
+                class="block py-2 hover:text-main transition-colors"
+                >Testimonials</a
+              >
+            </li>
+          </ul>
+          <button
+            id="mobile-join-btn"
+            class="bg-action text-white px-6 py-2 rounded-lg hover:bg-action/90 transition-colors mt-4"
+            data-original-text="Join Now"
+          >
+            Join Now
+          </button>
+        </nav>
+      </div>
+    </div>
+
+    <main>
+      <div class="overflow-hidden relative h-svh w-full">
+        <img
+          src="assets/img/main_bg.jpg"
+          alt="Person exercising"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      <div class="absolute top-0 bg-black/30 w-full h-full">
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full p-8"
+        >
+          <h1
+            class="text-3xl md:text-6xl font-bold font-poppins mb-8 text-white"
+          >
+            Start your fitness journey today
+          </h1>
+          <p class="text-secondary mb-8">
+            Track your activities, monitor your progress, and achieve your goals
+            with MoveOn.
+          </p>
+          <button
+            id="hero-join-btn"
+            class="rounded-md bg-action px-6 py-2 text-white font-bold hover:bg-action/90 transition-colors"
+            data-original-text="Try Now!"
+          >
+            Try Now!
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Registration Modal -->
+    <div
+      data-aos="fade-up"
+      id="overlay"
+      class="hidden absolute top-0 inset-0 bg-black/50 z-20"
+    >
+      <div id="sign" class="hidden container mx-auto py-32 px-7 md:px-32">
+        <div
+          class="max-w-md mx-auto bg-white rounded-xl shadow-lg py-10 px-8 relative flex flex-col justify-center h-fit"
+        >
+          <button id="close-modal" class="absolute top-4 right-4 text-main">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+
+          <h2
+            id="modal-title"
+            class="text-2xl md:text-4xl font-poppins font-bold text-center mb-8 text-main"
+          >
+            User Registration
+          </h2>
+
+          <form id="userForm" class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700"
+                >Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                class="outline-none mt-1 p-2 w-full rounded-md border-gray-300 shadow-sm"
+                required
+              />
+            </div>
+
+            <div class="grid grid-cols-3 gap-4">
+              <div>
+                <label for="age" class="block text-sm font-medium text-gray-700"
+                  >Age</label
+                >
+                <input
+                  type="number"
+                  id="age"
+                  class="outline-none mt-1 p-2 w-full rounded-md border-gray-300 shadow-sm"
+                  required
+                  min="13"
+                  max="120"
+                />
+              </div>
+              <div>
+                <label
+                  for="weight"
+                  class="block text-sm font-medium text-gray-700"
+                  >Weight (kg)</label
+                >
+                <input
+                  type="number"
+                  id="weight"
+                  class="outline-none mt-1 p-2 w-full rounded-md border-gray-300 shadow-sm"
+                  required
+                  min="20"
+                  max="300"
+                  step="0.1"
+                />
+              </div>
+              <div>
+                <label
+                  for="height"
+                  class="block text-sm font-medium text-gray-700"
+                  >Height (cm)</label
+                >
+                <input
+                  type="number"
+                  id="height"
+                  class="outline-none mt-1 p-2 w-full rounded-md border-gray-300 shadow-sm"
+                  required
+                  min="50"
+                  max="250"
+                />
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <label
+                for="location"
+                class="block text-sm font-medium text-gray-700"
+                >Location</label
+              >
+              <div class="flex space-x-2">
+                <input
+                  type="text"
+                  id="location"
+                  class="outline-none flex-1 rounded-md border-gray-300 shadow-sm p-2"
+                  required
+                />
+                <button
+                  type="button"
+                  id="getLocation"
+                  class="px-4 py-2 bg-gray-100 text-main rounded-md hover:bg-gray-200 transition-colors"
+                  data-original-text="Get Location"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <p id="locationStatus" class="text-sm text-gray-500" ]></p>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-action text-white py-2 px-4 rounded-md hover:bg-action/80 transition-colors"
+              data-original-text="Save Data"
+            >
+              Save Data
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
