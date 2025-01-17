@@ -22,8 +22,8 @@
       property="og:description"
       content="Join MoveOn to track your fitness journey, monitor your progress, and achieve your health goals."
     />
-    <meta property="og:image" content="assets/img/logo.svg" />
-    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:image" content="assets/img/favicon.svg" />
+    <meta property="og:url" content="https://moveon-fitness.netlify.app/" />
 
     <!-- twitter card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -166,9 +166,9 @@
       id="overlay"
       class="hidden absolute top-0 inset-0 bg-black/50 z-20"
     >
-      <div id="sign" class="hidden container mx-auto py-32 px-7 md:px-32">
+      <div id="sign" class="container mx-auto w-full py-32 px-7 md:px-32">
         <div
-          class="max-w-md mx-auto bg-white rounded-xl shadow-lg py-10 px-8 relative flex flex-col justify-center h-fit"
+          class="w-full mx-auto bg-white rounded-xl shadow-lg py-10 px-8 relative flex flex-col justify-center h-fit"
         >
           <button id="close-modal" class="absolute top-4 right-4 text-main">
             <svg
@@ -206,8 +206,8 @@
               />
             </div>
 
-            <div class="grid grid-cols-3 gap-4">
-              <div>
+            <div class="grid grid-cols-3 gap-4 justify-center items-end">
+              <div class="grid items-end">
                 <label for="age" class="block text-sm font-medium text-gray-700"
                   >Age</label
                 >
@@ -220,7 +220,7 @@
                   max="120"
                 />
               </div>
-              <div>
+              <div class="grid items-end">
                 <label
                   for="weight"
                   class="block text-sm font-medium text-gray-700"
@@ -236,7 +236,7 @@
                   step="0.1"
                 />
               </div>
-              <div>
+              <div class="grid items-end">
                 <label
                   for="height"
                   class="block text-sm font-medium text-gray-700"
@@ -253,23 +253,23 @@
               </div>
             </div>
 
-            <div class="space-y-2">
+            <div class="w-full space-y-2">
               <label
                 for="location"
                 class="block text-sm font-medium text-gray-700"
                 >Location</label
               >
-              <div class="flex space-x-2">
+              <div class="w-full justify-center flex space-x-2 px-2">
                 <input
                   type="text"
                   id="location"
-                  class="outline-none flex-1 rounded-md border-gray-300 shadow-sm p-2"
+                  class="outline-none w-4/5 flex-1 rounded-md border-gray-300 shadow-sm p-2"
                   required
                 />
                 <button
                   type="button"
                   id="getLocation"
-                  class="px-4 py-2 bg-gray-100 text-main rounded-md hover:bg-gray-200 transition-colors"
+                  class="w-1/5 px-4 py-2 bg-gray-100 text-main rounded-md hover:bg-gray-200 transition-colors"
                   data-original-text="Get Location"
                 >
                   <svg

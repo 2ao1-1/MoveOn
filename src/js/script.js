@@ -1,10 +1,5 @@
 "use strict";
 import { saveData, getData } from "./localStorage.js";
-// if ("serviceWorker" in navigator) {
-//   navigator.serviceWorker.getRegistrations().then((registrations) => {
-//     registrations.forEach((registration) => registration.unregister());
-//   });
-// }
 
 // DOM Elements Selectors with null checks
 const getId = (id) => document.getElementById(id);
