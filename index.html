@@ -166,9 +166,12 @@
       id="overlay"
       class="hidden absolute top-0 inset-0 bg-black/50 z-20"
     >
-      <div id="sign" class="container mx-auto w-full py-32 px-7 md:px-32">
+      <div
+        id="sign"
+        class="hidden container mx-auto w-full py-32 px-4 md:px-32"
+      >
         <div
-          class="w-full mx-auto bg-white rounded-xl shadow-lg py-10 px-8 relative flex flex-col justify-center h-fit"
+          class="w-full mx-auto bg-white rounded-xl shadow-lg py-10 px-6 relative flex flex-col justify-center h-fit"
         >
           <button id="close-modal" class="absolute top-4 right-4 text-main">
             <svg
@@ -193,7 +196,7 @@
             User Registration
           </h2>
 
-          <form id="userForm" class="space-y-6">
+          <form id="userForm" class="w-full space-y-6">
             <div>
               <label for="name" class="block text-sm font-medium text-gray-700"
                 >Name</label
@@ -259,17 +262,17 @@
                 class="block text-sm font-medium text-gray-700"
                 >Location</label
               >
-              <div class="w-full justify-center flex space-x-2 px-2">
+              <div class="flex flex-wrap space-x-2 px-2">
                 <input
                   type="text"
                   id="location"
-                  class="outline-none w-4/5 flex-1 rounded-md border-gray-300 shadow-sm p-2"
+                  class="outline-none flex rounded-md border-gray-300 shadow-sm p-2 w-full sm:w-4/5"
                   required
                 />
                 <button
                   type="button"
                   id="getLocation"
-                  class="w-1/5 px-4 py-2 bg-gray-100 text-main rounded-md hover:bg-gray-200 transition-colors"
+                  class="px-4 py-2 flex-1 bg-gray-100 text-main rounded-md hover:bg-gray-200 transition-colors w-full sm:w-1/5"
                   data-original-text="Get Location"
                 >
                   <svg
@@ -293,7 +296,7 @@
                   </svg>
                 </button>
               </div>
-              <p id="locationStatus" class="text-sm text-gray-500" ]></p>
+              <p id="locationStatus" class="text-sm text-gray-500"></p>
             </div>
 
             <button
